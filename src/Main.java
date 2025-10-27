@@ -1,6 +1,16 @@
 import soal1.*;
 import soal2.*;
 import soal3.*;
+import soal4.*;
+import soal5.*;
+
+/*
+=============================
+Main.java
+=============================
+
+File utama untuk menguji semua soal (1-5)
+*/
 
 public class Main {
     public static void main(String[] args) {
@@ -11,12 +21,14 @@ public class Main {
         soal1.Course course1 = new soal1.Course("Pemrograman Berorientasi Objek", 3, "Dr. Andi");
         course1.displayInfo();
 
+
         // =============================
         // SOAL 2 - ENCAPSULATION
         // =============================
         System.out.println("\n===== SOAL 2 - ENCAPSULATION =====");
         soal2.Course course2 = new soal2.Course("Struktur Data", -2, "Dr. Budi");
         course2.displayInfo();
+
 
         // =============================
         // SOAL 3 - RELATIONSHIP (AGGREGATION)
@@ -30,6 +42,7 @@ public class Main {
         s1.addCourse(c2);
         s1.displayStudentInfo();
 
+
         // =============================
         // SOAL 4 - INHERITANCE & POLYMORPHISM
         // =============================
@@ -41,5 +54,16 @@ public class Main {
         for (soal4.Person p : people) {
             p.introduce();
         }
+
+
+        // =============================
+        // SOAL 5 - ABSTRACT CLASS & INTERFACE
+        // =============================
+        System.out.println("\n===== SOAL 5 - ABSTRACT CLASS & INTERFACE =====");
+        soal5.Exam exam = new soal5.Exam(78);
+        soal5.Assignment tugas = new soal5.Assignment(92);
+
+        System.out.println("Exam Score: " + exam.calculateFinalScore() + " | Grade: " + exam.getGrade());
+        System.out.println("Assignment Score: " + tugas.calculateFinalScore() + " | Grade: " + tugas.getGrade());
     }
 }
