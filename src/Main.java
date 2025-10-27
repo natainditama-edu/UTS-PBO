@@ -29,5 +29,17 @@ public class Main {
         s1.addCourse(c1);
         s1.addCourse(c2);
         s1.displayStudentInfo();
+
+        // =============================
+        // SOAL 4 - INHERITANCE & POLYMORPHISM
+        // =============================
+        System.out.println("\n===== SOAL 4 - INHERITANCE & POLYMORPHISM =====");
+        soal4.Person[] people = {
+                new soal4.Student("Dewi"),
+                new soal4.Lecturer("Pak Arif")
+        };
+        for (soal4.Person p : people) {
+            p.introduce();
+        }
     }
 }
